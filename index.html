@@ -4,54 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Back-end</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" media="all">
+    <link rel="stylesheet" href="mediaquery.css">
     <link rel="shortcut icon" href="media/logo-icon.ico" type="image/x-icon">
+    <script defer src="app.js"></script>
 </head>
 <body>
-    <nav>
-        <div class="menu">
-        <a class="link-menu" href="index.html">Home</a>
-        <a class="link-menu" href="#">Sobre</a>
-        <a class="link-menu" href="#">projetos</a>
+    <img class="logo" src="media/logo-(500x500px).png" alt="Imagem da logo">
+    <div class="background">
+        <div class="background-overlay"></div>
+    </div>
+        <div class="menu-hamburger">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <div class="linha"></div>
+                <div class="linha"></div>
+                <div class="linha"></div>
+            </label>
+
+            <div class="overlay">
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Projetos</a>
+                        </li>
+                        <li>
+                            <a href="#">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="#">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </nav>
+
 
     <header>
-        <h1 class="title">Gabriel Damasceno Nunes</h1>
-        <div> 
-            <img class="contato" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
-            
-            <img class="contato" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg" />
-          
-        </div>
+        <h1 class="title">Gabriel Damasceno</h1>
     </header>
     
-    <h2>Posso te ajudar com: </h2>
+    <h2 class="posso-ajudar">Como posso te ajudar? </h2>
 
     <div class="ajuda">
         <h3>Desenvolvimento Back-end</h3>
-        <p>
-            Sou um Desenvolvedor Back-end especializado em diversas tecnologias como <p class="texto-destaque">Java e Spring</p>,<p class="texto-destaque">C# e .NET</p class="texto-destaque">, <p class="texto-destaque">SQL</p> criando aplicações criativas, robustas e eficientes, servindo uma alta performance e integração perfeita
+        <p class="texto-normal">
+            Sou um Desenvolvedor Back-end especializado em diversas tecnologias como <p class="texto-destaque">Java e Spring</p><p class="texto-normal">,</p><p class="texto-destaque"> C# e .NET</p class="texto-destaque"><p class="texto-normal">,</p> <p class="texto-destaque"> SQL</p> <p class="texto-normal">criando aplicações criativas, robustas e eficientes, servindo uma alta performance e integração perfeita</p>
         </p>
     </div>
 
-    <h2>Me conheça</h2>
+    <h2 class="me-conheca">Me conheça</h2>
 
     <div class="sobre-mim">
-         <p>
+         <p class="texto-normal">
             Olá! prazer te conhecer, sou o Gabriel. Sou um desenvolvedor back-end e estudante bacharel em ciências da computação e apaixonado pelo mundo da tecnologia, goto de trabalhar em equipe sempre prezando pelo trabalho criativo e eficiente. Crio projetos para resolução de problemas da vida real e do nosso cotidiano, <p class="texto-destaque">veja melhor abaixo</p> 
          </p>
+         <h3 class="texto-saber-mais">Quer saber mais?</h3>
+         <button class="botao-cv">
+            <a href="arquivos/Currículo Gabriel Damasceno.pdf" download="_blank" target="_blank">Baixar CV</a>
+         </button>
     </div>
+
+    <h2 class="ultimos-projetos">últimos projetos</h2>
 
     <div class="projetos">
         <div class="projeto-01">
-            <a href="#" target="_blank">Sistema de cadastro de usuários em C# <img src="media/code-csharp.png" alt="imagem do projeto"></a>
+            <a href="#" target="_blank"> <img class="img-projeto1" src="media/code-csharp.png" alt="imagem do projeto"></a>
+            <h2 class="texto-link">User register</h2>
+            <p class="descricao-projeto01">Projeto desenvolvido para cadastro de usuários na linguagem C#</p>
         </div>
     </div>
 
     <footer>
-        <div>
+        <div class="texto-desenvolvido-por">
             <p>Desenvolvido por Gabriel Damasceno</p>
+        </div>
+        <div class="image-git-in"> 
+            <a href="https://github.com/Gabrieldamasc" target="_blank">
+                <img class="contato" src="media/github-mark-white.png" />
+            </a>
+            
+            <a href="https://www.linkedin.com/in/gabriel-damasc/" target="_blank">
+                <img class="contato" src="media/linkedin.png"/>
+            </a>
         </div>
     </footer>
 </body>

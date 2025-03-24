@@ -1,31 +1,259 @@
 @charset "UTF-8";
 
+/* Versão mobile first */
+
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.1em;
 }
 
-header{
+body{
+    background-image: url(media/Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -2;
+    flex-wrap: wrap;
+}
+
+.background-overlay{
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo Menu burger */
+
+.menu-hamburger{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 4;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+.menu-icon{
+    width: 35px;
+    height: 30px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 5;
+    position: relative;
+    cursor: pointer;
 }
 
-.title{
-    justify-items: flex-start;
+.linha{
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s;
 }
 
-.contato{
-    flex-direction: row;
-    height: 5vh;
-    width: 5vw;
+/* Estilo do Overlay */
+
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.735);
+    transform: scale(0);
+    transition: 0.5s;
 }
 
 .menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-align: center;
+    list-style: none;
 }
 
-.link-menu{
-    margin: 0px 10px;
+.menu ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.menu ul li{
+    margin: 20px 0px;
+    padding: 20px;
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: #dbce10;
+}
+
+.contato{
+    width: 50px;
+    height: 50px;
+}
+
+/* Animação */
+
+#menu-toggle:checked + .menu-icon .linha:nth-child(1){
+    transform: rotate(45deg) translate(13px, 13px);
+}
+
+#menu-toggle:checked + .menu-icon .linha:nth-child(2){
+    opacity: 0;
+}
+
+#menu-toggle:checked + .menu-icon .linha:nth-child(3){
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+#menu-toggle:checked ~ .overlay{
+    transform: scale(1);
+}
+
+/* estilo do título */
+
+.logo{
+    margin-top: 23px;
+    margin-left: 10px;
+    height: 5rem;
+    width: 5rem;
+}
+
+header{
+    font-size: 2rem;
+    margin-top: 10px;
+    border-top: 1.2px solid rgba(196, 196, 196, 0.094);
+}
+
+h2{
+    font-size: 1.8rem;
+}
+
+.title{
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    margin-left: 20px;
+}
+
+.posso-ajudar, .me-conheca, .ultimos-projetos{
+    color: white;
+    margin: 20px;
+}
+
+.ajuda, .sobre-mim{
+    border: 1.2px solid rgba(196, 196, 196, 0.094);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.048);
+    backdrop-filter: blur(120px);
+    color: white;
+}
+
+.texto-normal{
+    display: inline;
+    color: gray;
+}
+
+.texto-destaque{
+    display: inline;
+    color: #dbce10;
+}
+
+.texto-saber-mais{
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.botao-cv{
+    border: none;
+    margin-top: 15px;
+    width: 140px;
+    height: 50px;
+    background-color: #dbce10;
+    border-radius: 11px;
+}
+
+.botao-cv a{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+.projeto-01{
+    margin: auto;
+    width: 400px;
+    color: gray;
+    border: 1.2px solid rgba(196, 196, 196, 0.094);
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.048);
+    backdrop-filter: blur(120px);
+    transition: 0.3s;
+}
+
+.projeto-01:hover{
+    transform: translate(-10px, -10px);
+    
+}
+
+.texto-link{
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: white;
+}
+
+.projeto-01 a{
+    text-decoration: none;
+}
+
+.texto-link, .descricao-projeto01{
+    margin: 20px;
+}
+
+.img-projeto1{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 20px;
+    width: 320px;
+    height: 210px;
+}
+
+footer{
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border: 1.2px solid rgba(196, 196, 196, 0.094);
+    border-radius: 10px;
+    color: white;
+}
+
+.texto-desenvolvido-por{
+    text-align: center;
+    margin: 20px;
+}
+
+.image-git-in{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 }
