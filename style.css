@@ -135,10 +135,15 @@ body{
     margin-left: 10px;
     height: 5rem;
     width: 5rem;
+    transition: 0.3s;
+}
+
+.logo:hover{
+    transform: translate(0px, 3px);
 }
 
 header{
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-top: 10px;
     border-top: 1.2px solid rgba(196, 196, 196, 0.094);
 }
@@ -191,6 +196,11 @@ h2{
     height: 50px;
     background-color: #dbce10;
     border-radius: 11px;
+    transition: 0.3s;
+}
+
+.botao-cv:hover{
+    transform: translate(0px, -4px);
 }
 
 .botao-cv a{
@@ -248,6 +258,7 @@ footer{
 }
 
 .texto-desenvolvido-por{
+    font-weight: 600;
     text-align: center;
     margin: 20px;
 }
@@ -256,4 +267,9 @@ footer{
     display: flex;
     justify-content: center;
     gap: 40px;
+}
+
+#imagem-git:hover, #imagem-linkedin:hover{
+    transition: 0.3s;
+    opacity: 20%;
 }
