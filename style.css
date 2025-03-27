@@ -33,7 +33,7 @@ body{
 
 .menu-hamburger{
     position: absolute;
-    top: 40px;
+    top: 56px;
     right: 40px;
     z-index: 4;
 }
@@ -134,7 +134,6 @@ body{
     margin-top: 23px;
     margin-left: 10px;
     height: 105px;
-    /* width: 5rem; */
     transition: 0.3s;
 }
 
