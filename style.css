@@ -20,120 +20,46 @@ body{
     flex-wrap: wrap;
 }
 
-.background-overlay{
-    z-index: -1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.menu-icon{
+    display: none;
 }
 
-/* Estilo Menu burger */
+.menu ul{
+    gap: 15px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
 
-.menu-hamburger{
-    position: absolute;
-    top: 56px;
-    right: 40px;
-    z-index: 4;
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.menu ul li a:hover{
+    transition: 0.3s;
+    border-bottom: 3px solid #dbce10;
+    border-radius: 4px;
+}
+
+#contact{
+    transition: 2s;
 }
 
 #menu-toggle{
     display: none;
 }
 
-.menu-icon{
-    width: 35px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 5;
-    position: relative;
-    cursor: pointer;
-}
-
-.linha{
-    height: 4px;
-    background-color: white;
-    border-radius: 2px;
-    transition: all 0.3s;
-}
-
-/* Estilo do Overlay */
-
-.overlay{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.735);
-    transform: scale(0);
-    transition: 0.5s;
-}
-
-.menu{
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    text-align: center;
-    list-style: none;
-}
-
-.menu ul{
-    padding: 0px;
-    margin: 0px;
-    list-style: none;
-}
-
-.menu ul li{
-    margin: 20px 0px;
-    padding: 20px;
-}
-
-.menu a{
-    text-decoration: none;
-    font-size: 2rem;
-    color: white;
-    transition: 0.3s;
-}
-
-.menu a:hover{
-    color: #dbce10;
-}
-
-.contato{
-    width: 50px;
-    height: 50px;
-}
-
-/* Animação */
-
-#menu-toggle:checked + .menu-icon .linha:nth-child(1){
-    transform: rotate(45deg) translate(13px, 13px);
-}
-
-#menu-toggle:checked + .menu-icon .linha:nth-child(2){
-    opacity: 0;
-}
-
-#menu-toggle:checked + .menu-icon .linha:nth-child(3){
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-#menu-toggle:checked ~ .overlay{
-    transform: scale(1);
-}
-
 /* estilo do título */
 
 .logo{
-    margin-top: 23px;
+    margin-top: -35px;
     margin-left: 10px;
-    height: 105px;
+    margin-right: 10px;
+    margin-bottom: -40px;
+    height: 200px;
     transition: 0.3s;
 }
 
@@ -259,6 +185,7 @@ h2{
 }
 
 footer{
+    width: 100%;
     margin-top: 30px;
     padding-bottom: 20px;
     border: 1.2px solid rgba(196, 196, 196, 0.094);
@@ -276,6 +203,11 @@ footer{
     display: flex;
     justify-content: center;
     gap: 40px;
+}
+
+.contato{
+    width: 50px;
+    height: 50px;
 }
 
 #imagem-git:hover, #imagem-linkedin:hover{
@@ -306,5 +238,10 @@ footer{
 
     .ajuda, .sobre-mim{
         width: 70%;
+    }
+
+    .contato{
+        width: 40px;
+        height: 40px;
     }
 }
